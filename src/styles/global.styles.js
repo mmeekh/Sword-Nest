@@ -31,9 +31,6 @@ const GlobalStyles = createGlobalStyle`
     /* Spacing */
     --container-padding: ${({ theme }) => theme.spacing[4]};
     --section-padding: ${({ theme }) => theme.spacing[20]};
-    
-    /* Scrollbar Width */
-    scrollbar-gutter: stable;
   }
 
   /* HTML & Body */
@@ -75,12 +72,6 @@ const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb:hover {
     background: ${({ theme }) => theme.colors.neonBlue};
-  }
-
-  /* Firefox Scrollbar */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: ${({ theme }) => theme.colors.silverGray} ${({ theme }) => theme.colors.darkGray};
   }
 
   /* Typography */
@@ -126,43 +117,22 @@ const GlobalStyles = createGlobalStyle`
     background: none;
   }
 
-  input, textarea, select {
-    font-family: inherit;
-    cursor: none; /* Custom cursor */
+  /* Utility Classes */
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
   }
 
-  /* Focus States */
-  :focus-visible {
-    outline: 2px solid ${({ theme }) => theme.colors.neonBlue};
-    outline-offset: 2px;
-  }
-
-  /* Selection */
-  ::selection {
-    background-color: ${({ theme }) => theme.colors.neonBlue};
-    color: ${({ theme }) => theme.colors.charcoalBlack};
-  }
-
-  /* Images */
-  img, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Lists */
-  ul, ol {
-    list-style: none;
+  .section {
+    padding: var(--section-padding) 0;
   }
 
   /* Animations */
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @keyframes slideUp {
@@ -177,101 +147,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
   }
 
   @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
 
-  @keyframes glowPulse {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-    }
-    50% {
-      box-shadow: 0 0 40px rgba(56, 189, 248, 0.8), 0 0 60px rgba(56, 189, 248, 0.4);
-    }
-  }
-
-  /* Utility Classes */
-  .container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 var(--container-padding);
-  }
-
-  .section {
-    padding: var(--section-padding) 0;
-  }
-
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .no-scroll {
-    overflow: hidden;
-  }
-
-  /* Loading State */
-  .loading {
-    pointer-events: none;
-    opacity: 0.5;
-  }
-
-  /* Transitions */
-  .transition-all {
-    transition: all var(--transition-normal);
-  }
-
-  .transition-colors {
-    transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
-  }
-
-  .transition-transform {
-    transition: transform var(--transition-normal);
-  }
-
-  .transition-opacity {
-    transition: opacity var(--transition-slow);
-  }
-
-  /* Hover Effects */
-  .hover-glow {
-    transition: all var(--transition-normal);
-    
-    &:hover {
-      text-shadow: 0 0 20px currentColor;
-    }
-  }
-
-  .hover-lift {
-    transition: transform var(--transition-normal);
-    
-    &:hover {
-      transform: translateY(-4px);
-    }
-  }
-
-  /* Responsive Typography */
+  /* Responsive */
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     html {
       font-size: 14px;
@@ -280,30 +165,6 @@ const GlobalStyles = createGlobalStyle`
     :root {
       --container-padding: ${({ theme }) => theme.spacing[3]};
       --section-padding: ${({ theme }) => theme.spacing[16]};
-    }
-  }
-
-  /* Reduced Motion */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
-
-  /* Print Styles */
-  @media print {
-    body {
-      background: white;
-      color: black;
-    }
-    
-    .no-print {
-      display: none !important;
     }
   }
 `;
