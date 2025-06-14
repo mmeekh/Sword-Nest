@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Sword Nest | AI-Powered Creative Agency</title>
+    <meta name="title" content="Sword Nest | AI-Powered Creative Agency">
+    <meta name="description" content="We forge AI-powered brands that cut through the noise. Sword Nest is a cutting-edge creative agency specializing in data-driven strategies for ambitious startups.">
+    <meta name="keywords" content="AI marketing, creative agency, startup marketing, brand strategy, performance marketing, AI-powered design, growth marketing, digital transformation">
+    <meta name="author" content="Sword Nest">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swordnest.com/">
+    <meta property="og:title" content="Sword Nest | AI-Powered Creative Agency">
+    <meta property="og:description" content="We forge AI-powered brands that cut through the noise. Cutting-edge creative strategies for ambitious startups.">
+    <meta property="og:image" content="https://swordnest.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://swordnest.com/">
+    <meta property="twitter:title" content="Sword Nest | AI-Powered Creative Agency">
+    <meta property="twitter:description" content="We forge AI-powered brands that cut through the noise. Cutting-edge creative strategies for ambitious startups.">
+    <meta property="twitter:image" content="https://swordnest.com/assets/images/og-image.jpg">
+    <meta property="twitter:site" content="@swordnest">
+    <meta property="twitter:creator" content="@swordnest">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#38BDF8">
+    <meta name="msapplication-TileColor" content="#0F0F0F">
+    <meta name="theme-color" content="#0F0F0F">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/assets/fonts/custom-font.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Critical CSS (inline for performance) -->
+    <style>
+        /* Critical styles for initial paint */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --color-charcoal-black: #0F0F0F;
+            --color-neon-blue: #38BDF8;
+            --color-orange: #F97316;
+            --color-silver-gray: #9CA3AF;
+            --color-light-gray: #F3F4F6;
+        }
+        
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--color-charcoal-black);
+            color: var(--color-light-gray);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        /* Initial loading state */
+        .app-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-charcoal-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--color-silver-gray);
+            border-top-color: var(--color-neon-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Hide content until React loads */
+        #root:empty + .app-loading {
+            display: flex;
+        }
+        
+        #root:not(:empty) + .app-loading {
+            display: none;
+        }
+    </style>
+    
+    <!-- Google Analytics (replace UA-XXXXXXXX-X with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXXX-X');
+    </script>
+</head>
+<body>
+    <noscript>
+        <div style="padding: 20px; text-align: center; background: #0F0F0F; color: #F3F4F6;">
+            <h1>JavaScript Required</h1>
+            <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser settings and reload the page.</p>
+        </div>
+    </noscript>
+    
+    <div id="root"></div>
+    
+    <!-- Loading screen (removed once React loads) -->
+    <div class="app-loading">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sword Nest",
+        "description": "AI-powered creative agency specializing in cutting-edge digital strategies for startups",
+        "url": "https://swordnest.com",
+        "logo": "https://swordnest.com/assets/images/logo.png",
+        "sameAs": [
+            "https://twitter.com/swordnest",
+            "https://linkedin.com/company/swordnest",
+            "https://instagram.com/swordnest"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "sales",
+            "email": "hello@swordnest.com"
+        }
+    }
+    </script>
+</body>
+</html>
